@@ -1,0 +1,55 @@
+<div class="wrapper">
+    <header class="main-header">
+        <a href="/" class="logo" style="background-color: #ffffff;">
+            <span class="logo-mini"><img src="images/logo-small.png" style="height: 25px;"></span>
+            <img src="images/logo.png" style="height: 25px;">
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation" style="background-color: white;">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="color:red">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown user user-menu open">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="background-color: transparent">
+                    <span class="hidden-xs"><b>{{loginUser.userId}}</b></span>
+                  </a>
+                 </li>
+                <!-- Control Sidebar Toggle Button -->
+                <li>
+                  <a title="Logout" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+        </nav>
+    </header>
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu" data-widget="tree" style="background: #32C2CD;">
+                <li class="header">MAIN NAVIGATION</li>
+                <!--<li [routerLinkActive]="['active']"><a [routerLink]="['/acRequest']"><span>AC Request</span></a></li>-->
+                <li [routerLinkActive]="['active']"><a [routerLink]="['/standingInstruction']"><span>Content List</span></a></li>
+                    <!--<li [routerLinkActive]="['active']"><a [routerLink]="['syndicatedLoanCustomer']"><span>Syndicated Loan Customer</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['Special Pricing']"><span>Special Pricing</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/users']"><span>Users</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/Reasons']"><span>Reasons</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/systemParameters']"><span>System Parameters</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/treasuryProducts']"><span>Treasury Products</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/syndicationLoan']"><span>Syndication Loan</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/prodExcpHandling']"><span>Prod Excp. Handling</span></a></li>
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/holidays']"><span>Holidays</span></a></li> 
+                    <li [routerLinkActive]="['active']"><a [routerLink]="['/auditor']"><span>Auditor</span></a></li>-->
+            </ul> 
+            <ul class="sidebar-menu" data-widget="tree" style="background: #32C2CD; " *ngFor='let menu of loginUser.menu' >
+                    <li [routerLinkActive]="['active']" > <a routerLink="/{{menu.name}}" ><span>{{menu.label}}</span></a></li>     
+              </ul>  
+        </section>
+    </aside>
+    <div class="content-wrapper" style="background: #f1f1f1;">
+        <router-outlet></router-outlet>
+    </div>
+    <footer class="main-footer">
+        <div>
+            <strong><span>&copy; 2018 GK Organic.</span></strong>
+        </div>
+    </footer>
+</div>

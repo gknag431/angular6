@@ -1,0 +1,72 @@
+<div id="bodyWrapper">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+              <div id="bdy-rgt-wrp" style="min-height: 759px;">
+                  <div id="page_content">
+                      <div id="content" class="col-lg-12">
+                          <h3>{{title}}</h3>
+                          <div id="detailed_Content" class="row" style="margin-left:120px;">
+                              <div id="non_prev_block" class="col-sm-12">
+                                  <div id="right_content" class="slide-body">
+                                      <div class="sec-title">
+                                          <button id="CloseUserDetails" class="btn btn-danger pull-right" (click)="goBack()">Close</button>
+                                          <button (click)="saveStandingInstruction()" type="submit" [disabled]="standingInstructionForm.invalid || !standingInstructionForm.dirty" 
+                                              class="btn btn-success pull-right">Submit</button>
+                                      </div>
+
+                                      <form name="standingInstructionForm" action="javascript:{}" #standingInstructionForm="ngForm" novalidate>
+                                          <div class="sec-block">
+                                              <div class="row">
+                                                  <div class="col-sm-3 col-md-3 col-lg-12">
+                                                      <div class="row" style="margin-left:120px;">
+                                                          <div class="col-xs-12 col-sm-8 col-md-8">
+
+                                                              <div class=" form-group">
+                                                                  <label for="customerName">
+                                                                    Customer Name
+                                                                  </label><span style="color:red;">*</span> 
+                                                                  <input type="text" [disabled]="isView" name="customerName" class="form-control" style="width: 250px;" tabindex="1"
+                                                                      required [(ngModel)]="standingInstruction.customerName">
+                                                              </div>
+
+
+                                                              <div class=" form-group">
+                                                                  <label for="auditorname">
+                                                                    Auditor Name
+                                                                  </label><span style="color:red;">*</span> 
+                                                                  <input type="text" [disabled]="isView" name="auditorName" class="form-control" style="width: 250px;" tabindex="2" required [(ngModel)]="standingInstruction.auditorName">
+                                                              </div>
+
+                                                              <div class=" form-group">
+                                                                  <label for="standingInstructions">
+                                                                    Standing Instructions
+                                                                  </label><span style="color:red;">*</span> 
+                                                                  <input type="text" [disabled]="isView" name="standingInstructions" class="form-control" style="width: 250px;" tabindex="3" 
+                                                                  required [(ngModel)]="standingInstruction.standingInstructions">
+                                                              </div>
+
+                                                              <div class=" form-group">
+                                                                  <label for="expiryDate">
+                                                                    SI Expiry Date
+                                                                  </label><span style="color:red;">*</span> 
+                                                                  <input type="date" [disabled]="isView" name="expiryDate" class="form-control" style="width: 250px;" tabindex="4"
+                                                                   required [(ngModel)]="standingInstruction.expiryDate">
+                                                              </div>
+ 
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+{
+    "data":{
+        "id": "viewer1",
+        "name": "Ops User",
+        "role": {"Id": 1, "text": "Ops User Maker"},
+        "country": "Singapore"
+    }
+}

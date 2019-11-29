@@ -1,0 +1,14 @@
+{
+    "data":{
+        "cif":343434,
+        "customerName":"Jones",
+        "ROC":99999,
+        "pricing":67,
+        "currency":"USD",
+        "status":"pending",
+        "lastUpdatedBy":"name",
+        "lastUpdatedDate":"12-05-2018",
+        "id":1
+    }
+}
+

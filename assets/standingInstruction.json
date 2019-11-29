@@ -1,0 +1,14 @@
+{
+    "data":{
+        "cif":999999,
+        "customerName":"Jones",
+        "auditorName":"Auditor1",
+        "standingInstructions":"instruction",
+        "expiryDate":"12-05-2018",
+        "lastUpdatedBy":"aaaa",
+        "lastUpdatedDate":"12-04-2018",
+       
+        "id":1
+    }
+}
+
